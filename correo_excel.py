@@ -52,7 +52,7 @@ else:
 attachment.add_header("Content-Disposition", "attachment", filename=fileToSend)
 msg.attach(attachment)
 
-server = smtplib.SMTP("mail.tarjetacyd.cl:587")
+server = smtplib.SMTP("")
 server.starttls()
 server.login(username,password)
 server.sendmail(emailfrom,emailto , msg.as_string())
